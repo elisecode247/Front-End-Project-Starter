@@ -1,0 +1,23 @@
+{
+  "name": "book-swap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "elisecode247",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^13.1.1",
+    "gulp": "^3.9.1",
+    "gulp-pug": "^3.2.0",
+    "gulp-sass": "^2.3.2",
+    "livereload": "^0.6.0"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "pug": "^2.0.0-beta6",
+    "sass": "^0.5.0"
+  }
+}

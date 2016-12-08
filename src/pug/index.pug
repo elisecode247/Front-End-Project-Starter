@@ -1,0 +1,18 @@
+extends layout
+block title
+  title Project Starter
+block meta
+  meta(name='description', content='This is what people will read when they google your website.')
+block links
+block body
+  header
+  main
+    h1 Basic Project Starter
+    h2 Test it out
+    button#test-button Click me
+block scripts
+  script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+  script(type='text/javascript', src='dist/js/all.js')
+  script.
+    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+    ':35729/livereload.js?snipver=1"></' + 'script>')
