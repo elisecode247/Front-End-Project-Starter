@@ -39,4 +39,8 @@ gulp.task('browserify:watch', function () {
 
 });
 
+gulp.task('basic', function(){
+  gulp.watch('./dist')
+})
+
 gulp.task('default', ['sass:watch', 'pug:watch', 'browserify:watch']);
