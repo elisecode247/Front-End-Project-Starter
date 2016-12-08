@@ -2,7 +2,8 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var pug = require('gulp-pug');
 var browserify = require('browserify');
-var fs = require('fs');
+var babelify = require('babelify');
+var source = require('vinyl-source-stream');
 
 gulp.task('pug', function buildHTML() {
   return gulp.src('src/pug/index.pug')
@@ -27,11 +28,15 @@ gulp.task('sass:watch', function () {
 
 gulp.task('browserify', function () {
   browserify({
-    entries: 'src/js/all.js',
-    debug: true
-  })
-  .bundle()
-  .pipe(fs.createWriteStream('./dist/js/all.js'))
+      entries: 'src/js/all.js',
+      debug: true
+    })
+    .transform(babelify.configure({
+      presets: ["es2015", "react"]
+    }))
+    .bundle()
+    .pipe(source("all.js"))
+    .pipe(gulp.dest('./dist/js'))
 });
 
 gulp.task('browserify:watch', function () {
@@ -39,7 +44,7 @@ gulp.task('browserify:watch', function () {
 
 });
 
-gulp.task('basic', function(){
+gulp.task('basic', ['browserify:watch'], function () {
   gulp.watch('./dist')
 })
 

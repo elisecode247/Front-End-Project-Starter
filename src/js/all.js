@@ -1,3 +1,3 @@
-var components = require('./components');
+var components = require('./components.js');
 
 components();

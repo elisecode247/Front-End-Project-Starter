@@ -1,7 +1,7 @@
 # Front End Project Starter
 ---
 ## Overview
-A project starter for front end development. Uses jQuery, pug (jade), sass, browserify, and livereload.
+A project starter for front end development. Uses jQuery, pug (jade), sass, browserify, and livereload. Practice using github, the command interface, and npm. You can develop with slow or no internet access.
 ## Prerequisites
 Install the following:
 * Chrome
