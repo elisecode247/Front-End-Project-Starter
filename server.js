@@ -4,6 +4,7 @@ var express = require('express');
 var port = 8080;
 var path = require('path');
 var app = express();
+app.use('/node_modules/bootstrap', express.static(process.cwd() + '/node_modules/bootstrap'));
 app.use('/dist', express.static(process.cwd() + '/dist'));
 /**
 app.get('/', function (req, res, next) {
