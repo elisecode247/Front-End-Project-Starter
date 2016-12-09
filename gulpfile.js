@@ -2,6 +2,7 @@ var gulp = require("gulp");
 var sass = require("gulp-sass");
 var pug = require("gulp-pug");
 var browserify = require("browserify");
+var babelify = require("babelify");
 var source = require("vinyl-source-stream");
 var browserSync = require("browser-sync")
   .create();
@@ -36,6 +37,9 @@ gulp.task("browserify", function () {
       entries: "src/js/all.js",
       debug: true
     })
+    .transform(babelify.configure({
+      presets: ["es2015", "react"]
+    }))
     .bundle()
     .pipe(source('all.js'))
     .pipe(gulp.dest("./dist/js"))
@@ -58,4 +62,3 @@ gulp.task("default", function () {
   gulp.watch("./src/pug/*.pug", ["pug:watch"]);
   gulp.watch("./src/js/**/*.js", ["browserify:watch"])
 });
-
