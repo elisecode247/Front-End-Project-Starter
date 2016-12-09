@@ -1,23 +1,27 @@
-# Front End Project Starter
+# Free Code Camp Front End Project Starter
 ---
 ## Overview
-A project starter for front end development. Uses jQuery, pug (jade), sass, browserify, and livereload. Practice using github, the command interface, and npm. You can develop with slow or no internet access.
+A project starter for Free Code Camp front end projects. Try practicing in a different environment (instead of CodePen). It includes Bootstrap, Pug, jQuery, Sass, Browserify, and Browsersync, but you can choose not to use any of them. You don't have to know how to use git or GitHub.
+
 ## Prerequisites
 Install the following:
-* Chrome
-* [Node.js](https://nodejs.org/en/download/)
-* [LiveReload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei), a chrome extension
+
+* [Node.js](https://nodejs.org/en/download/) (Node has npm)
 * A code editor or IDE (examples: Atom, Brackets, Sublime)
-## Steps
-1. Download the project onto your computer with the terminal
-```git clone https://github.com/elisecode247/Front-End-Project-Starter.git your-project-name```
-2. Install the dependencies that the project requires
-```npm install```
-3. Run the server
-```npm start```
-4. Open up Chrome and go to http://localhost:8080
-5. Run gulp
-```gulp```
-6. Click on the LiveReload button to enable it
-7. Open up the project folder in your code editor
-8. Start coding!
+
+## Installing
+1. Click the green button "Clone or download" and click "Download Zip"
+2. Extract the zip file to where you want it on your computer
+3. Open up your command prompt and ```cd``` into the folder
+4. In the command prompt, enter: ```npm install```
+
+##Getting Started
+1. Run the server with one of the two options:
+   * In the command prompt, enter: ```npm start```.
+   * If you don't want to use Pug, Sass, and Browserify, enter: ```npm basic```.
+2. Begin coding:
+   * For the basic option, edit the files in the folder "basic". You can ignore all the other folders and files for now.
+   * For the advanced option, edit the files in the "src" folder.
+
+## After Project Completion
+1. Learn git and github

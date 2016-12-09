@@ -1,14 +1,9 @@
 extends layout
 block body
-  header
   main
     h1 Project Starter
     h2 For Free Code Camp Front End Projects
+    p If the button is green, bootstrap is installed.
     button.btn.btn-success#test-button Click me
-    p#jquery-test jQuery is working
-    #app
-block scripts
-  script(type='text/javascript', src='dist/js/all.js')
-  script.
-    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
-    ':35729/livereload.js?snipver=1"></' + 'script>')
+    p#jquery-test If the background color is "skyblue".
+
